@@ -1,0 +1,32 @@
+name: Report an issue on a page
+description: An error, a broken link or image, or a suggestion for one page of the site or book.
+title: "[Page]: "
+labels: [page-report]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page path. The site's Report an issue menu item fills this in for you.
+      placeholder: /aiml-common/lectures/learning-problem/index
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of issue
+      options:
+        - Error in the text or math
+        - Broken link or image
+        - Code that does not run
+        - Unclear explanation
+        - Suggestion
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What is wrong
+      description: Quote the text or describe the figure, and say what you expected to see.
+    validations:
+      required: true
